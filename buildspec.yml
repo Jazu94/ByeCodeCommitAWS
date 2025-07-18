@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       nodejs: latest
     commands:
-      - echo "Starting validation..."
+      - echo "Starting validation...."
   
   pre_build:
       commands:

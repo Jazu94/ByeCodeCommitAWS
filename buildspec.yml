@@ -7,7 +7,7 @@ phases:
     commands:
       - echo "Starting validation..."
   
-  pre-build:
+  pre_build:
       commands:
         - echo "No pre Builds"
 
@@ -16,6 +16,6 @@ phases:
       - echo "Checking if text is present in index.html"
       - if grep -q "Congratulations" index.html; then echo "✅ Text found!"; else echo "❌ Text not found!" && exit 1; fi
 
-  post-build:
+  post_build:
       commands:
         - echo "No post Builds"

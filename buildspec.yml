@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - echo "Starting validation..."
+  
+  pre-build:
+      commands:
+        - echo "No pre Builds"
+
+  build:
+    commands:
+      - echo "Checking if text is present in index.html"
+      - if grep -q "Congratulations" index.html; then echo "✅ Text found!"; else echo "❌ Text not found!" && exit 1; fi
+
+  post-build:
+      commands:
+        - echo "No post Builds"
